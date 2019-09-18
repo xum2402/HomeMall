@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: user-service
+  datasource:
+    druid:
+      url: jdbc:mysql://10.0.0.111:3307/user_mysql
+      username: root
+      password: 123
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  thymeleaf:
+    cache: false
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.2.3.125:8761/eureka
+mybatis:
+  mapper-locations: classpath:mappers/*
